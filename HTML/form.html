@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <form action="save.php" mrthod="GET">
+        <label for="name">Name</label>
+        <input type="text" name="stu_name" id="name" placeholder="Enter Your Name"required><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="stu_email"id="email" placeholder="Enter Your Email"required><br><br>
+        <label for="password">Password</label>
+        <input type="password" name="stu_password" id="password" placeholder="Enter Your Password"required><br><br>
+        <label for="ph number">Phone Number</label>
+        <input type="number" name="stu_ph_num" id="ph number" placeholder="Enter Your Ph No"required><br><br>
+        <label for="passport">Passport</label>
+        <input type="file" name="stu_passport" id="passport" placeholder="Enter Your passport" accept="image/*"required><br><br>
+        <label for="year">Year</label>
+        <select name="stu_name" id="year">
+            <option value="">Choose Year</option>
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+            <option value="Forth Year">Forth Year</option>
+            <option value="Fifth Year">Fifth Year</option>
+            <option value="Sixth Year">Sixth Year</option>
+        </select><br><br>
+        <label for="">Gender</label>
+        <input type="radio" name="stu_gender" id="Male"><label for="male">Male</label>
+        <input type="radio" name="stu_gender" id="Female"><label for="female">Female</label>
+        <input type="radio" name="stu_gender" id="Other"><label for="other">Other</label><br><br>
+        <button type="submit">Save</button>
+        
+    </form>
+    <hr>
+    <a href="index.html"><h2>Back To Main Page</h2></a>
+
+</body>
+</html>
