@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js 1</title>
+</head>
+<body>
+    <script>
+        //Variable
+        var a = 13; // Global Variable
+        console.log(a);
+        let b = 23; // Block Scope Variable
+        console.log(b);
+        const c = 33; // Constant Variable
+        console.log(c);
+
+        a = 103;
+        console.log(a);
+        b = 203;
+        console.log(b);
+        //c = 303;
+        //console.log(c);
+
+        //Variable Scope
+        var x = 12;
+        if (x == 12){
+            var num1 = 12
+            let num2 = 15
+        }
+        console.log(num1);
+        //console.log(num2);
+        
+        let a1; // Undefined
+        console.log(a1);
+        let b1 = null; // Null
+        console.log(b1);
+        
+        //Addition Operator
+        let three = 1 + 2;
+        console.log(three);
+        let four = three + 1
+        console.log(four);
+        let threeone = 'three' + 1
+        console.log(threeone);
+        
+        //Substraction Operator
+        let two = 4 - 2;
+        console.log(two);
+        
+        //Division Operator
+        let div1 = 20/4;
+        console.log(div1);
+        let div2 = 20/7;
+        console.log(div2);
+        let div3 = 1/0;
+        console.log(div3);
+
+        //Remainder Operator
+        let rem1 = 20%5;
+        console.log(rem1);
+        let rem2 = 20%7;
+        console.log(rem2);
+        let rem3 = 1%0;
+        console.log(rem3);
+
+        //Multiplication Operator
+        let mul1 = 12*12;
+        console.log(mul1);
+        let mul2 = -1*2;
+        console.log(mul2);
+        let mul3 = -12*12;
+        console.log(mul3);
+
+        //Exponential Operator
+        let exp1 = 2**2;
+        console.log(exp1);
+        let exp2 = 2**8;
+        console.log(exp2);
+
+        //Precedence Operator
+        // * / % + - =
+        let total = 1 * 2 + 5 / 2 % 2 ;
+        console.log(total);
+        
+        //Comparison
+        let n = 12;
+        let m = "12"
+        console.log(typeof(n));
+        console.log(typeof(m));
+        console.log(n<15);
+        console.log(n<5);
+        console.log(n<=15);
+        console.log(n<=12);
+        console.log(n>=1);
+        console.log(n==m);
+        console.log(n===m);
+        console.log(n!=m);
+        console.log(n!==m);
+
+        //Condition
+        if(true){
+            //Do Sth
+        }
+
+        //One Line Writing
+        if(1==1)console.log("1 equals to 1");
+
+        //If Example
+        let input1 = prompt("Enter Number One");
+        console.log(input1);
+        if(input1<=50) {
+            document.write("<h1>Number is greater than 50</h1>");
+        }
+        
+        //Else
+        if(true){
+            //do sth
+        } else{
+            //do sth
+        }
+
+        //Else if
+        let input3 = prompt("Enter Number 3");
+        console.log(input3);
+        if(input3<50) {
+            document.write("<h1>Number three is less than 50</h1>");
+        } else if(input3=50) {
+            document.write("<h1>Number three equals 50</h1>");
+        } else {
+            document.write("<h1>Number three greater than 50</h1>");
+        }
+
+
+    </script>
+</body>
+</html>
