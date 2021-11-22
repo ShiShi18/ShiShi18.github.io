@@ -29,19 +29,96 @@
             console.log(java);
             let js = document.my_form.js.value;
             console.log(js);
+            let cn = 50 - c;
+            let jn = 50 - java;
+            let jsn = 50 - js;
 
             // && And
             // || Or
             // ! Not
+
+            if(c >= 50 && java >= 50 && js >= 50){
+
+                if(c > 80 && java > 80 && js > 80){
+
+                    document.write(`You got all distinction in Turbo C with ${c}-Mark,Java with ${java}-Mark,JavaScript with ${js}-Mark.`);
+
+                }else if(c > 80 || java > 80 || js > 80){
+
+                    if(c > 80){
+
+                        document.write(`You got distinction in Turbo C with ${c}-Mark.`);
+
+                        if(java > 80){
+
+                            document.write(`You got  distinction in Java with ${java}-Mark.`)
+
+                        }else if(js > 80){
+                            
+                            document.write(`You got distinction in JavaScript with ${js}-Mark.`);
+                        }
+                        
+                    }else if(java > 80){
+
+                        document.write(`You got distinction in Java with ${java}-Mark.`);
+
+                        if(js > 80){
+
+                            document.write(`You got distinction in JavaScript with ${js}-Mark.`);
+                        }
+
+                    }else{
+
+                        document.write(`You got distinction in JavaScript with ${js}-Mark.`);
+                    }
+
+                }else{
+
+                    document.write(`You pass with the mark of ${c} in Turbo C,${java} in Java and ${js} in JavaScript.`);
+                }
             
-            
-            if (c < 50 || java < 50 || js < 40){
-                document.write("<h1>I'm sorry but you failed.</h1>");
-            }else if(c > 80 || java > 80 || js > 80){
-                document.write("<h1>You Pass with Distinction!</h1>");
-            }else {
-                document.write("<h1>You've passed!</h1>");
+            }else{
+
+                if(c < 50 && java < 50 && js < 50){
+
+                    document.write(`You fail with ${c}-Mark in Turbo C, ${java}-Mark in Java and ${js}-Mark in JavaScript.`);
+
+                }else if(c < 50 || java <  50 || js < 50){
+                    
+                    if(c < 50){
+
+                        document.write(`You fail in Turbo C.You only need ${cn}-Mark in Turbo C to pass.`);
+
+                        if(java < 50){
+
+                                document.write(`You fail in Java.You only need ${jn}-Mark in Java to pass.`);
+
+                        }else if(js < 50){
+
+                            document.write(`You fail in JavaScript.You only need ${jsn} in JavaScript to pass.`);
+
+                        }
+
+                    }else if(java < 50){
+
+                        document.write(`You fail in Java.You only neeed ${jn}-Mark in Java to pass.`);
+
+                        if(js < 50){
+
+                            document.write(`You fail in JavaScript.You only need ${jsn} in JavaScript to pass.`); 
+
+                        }
+
+                    }else{
+
+                        document.write(`You fail.You only need ${jsn}-Mark in JavaScript to pass.`);
+
+                    }
+                   
+                }
+                
             }
+           
         }
     </script>
     

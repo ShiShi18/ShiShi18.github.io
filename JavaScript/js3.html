@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // Array
+        // [] or Array()
+
+        let arr = [1,2,3];
+        let arr1 = ['a','b','c'];
+        console.log(arr);
+        console.log(arr1);
+        console.log(arr[2]);
+        console.log(arr1[2]);
+
+        let arr2 = [1,2,3,'a','b','c',['x','y','z']];
+        console.log(arr2);
+        console.log(arr2[6]);
+
+        let multi = [[1,2,3],['a','b','c'],['x','y','z']];
+        console.log(multi);
+        console.log(multi[2][3]);
+        
+        let fruits = [];
+        fruits[0] = 'Apple';
+        fruits[1] = 'Oranger';
+        fruits[2] = 'Banana';
+        console.log(fruits);
+        console.log(fruits.length);
+
+        fruits.push('Mango');
+        console.log(fruits);
+
+        fruits.unshift('Cherry');
+        console.log(fruits);
+
+        fruits.pop();
+        console.log(fruits);
+
+        fruits.shift();
+        console.log(fruits);
+
+        fruits.sort();
+        console.log(fruits);
+
+        fruits.reverse();
+        console.log(fruits);
+
+        let arr_a = [1,2,3];
+        let arr_b = ['a','b','c'];
+        let arr_c = arr_a.concat(arr_b);
+        console.log(arr_c);
+        let arr_d = [...arr_a,...arr_b];
+        console.log(arr_d);
+    </script>
+</body>
+</html>

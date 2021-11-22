@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Pass</title>
+</head>
+<body><center>
+    <h1>
+        Exam Pass
+    </h1>
+    <form name="my_form">
+        <label for = "c">Turbo C</label>
+        <input type="number" name="c" id="c" required placeholder="Enter Turbo C Mark"><br><br>
+        <label for = "java">Java</label>
+        <input type="number" name="java" id="java" required placeholder="Enter Java Mark"><br><br>
+        <label for = "js">JavaScript</label>
+        <input type="number" name="js" id="js" required placeholder="Enter JavaScript Mark"><br><br>
+        <button type="button" onclick="result()">Result</button>
+        </form>
+    
+    <script>
+        function result(){
+            // alert("Hello");
+            let c = document.my_form.c.value;
+            console.log(c);
+            let java = document.my_form.java.value;
+            console.log(java);
+            let js = document.my_form.js.value;
+            console.log(js);
+            let cn = 50 - c;
+            let jn = 50 - java;
+            let jsn = 50 - js;
+
+            // && And
+            // || Or
+            // ! Not
+
+            if(c >= 50 && java >= 50 && js >= 50){
+
+                if(c > 80 || java > 80 || js > 80){
+
+                    if(c > 80 ){
+
+                        if(java > 80){
+
+                            document.write(`<h1>You got distinction in Turbo C with ${cn}-Mark and Java with ${jn}-Mark.</h1>`);
+
+                        }else if(js > 80){
+
+                            document.write(`<h1>You got distinction in Turbo C with ${cn}-Mark and JavaScript ${jsn}-Mark.</h1>`);
+
+                        }else{
+
+                            document.write(`<h1>You got distinction in Turbo C with ${cn}-Mark.</h1>`);
+
+                        }
+
+                    }else if(java > 80){
+
+                        if(js > 80){
+
+                            document.write(`<h1>You got distinction in Java with ${jn}-Mark and JavaScript with ${jsn}-Mark.</h1>`);
+
+                        }else{
+
+                            document.write(`<h1>You got distinction in Java with ${jn}-Mark.</h1>`);
+
+                        }
+
+                    }else{
+
+                        document.write(`<h1>You got distinction in JavaScript with ${jsn}-Mark.</h1>`);
+
+                    }
+
+                }else if(c > 80 && java > 80 && js > 80){
+
+                    document.write(`<h1>You got distinction in all Subject with Turbo C in ${cn}-Mark, Java with ${jn}-Mark and JavaScript with ${jsn}-Mark.</h1>`);
+
+                }else{
+
+                    document.write(`<h1>You pass in all subject with Turbo C in ${cn}-Mark, Java with ${jn}-Mark and JavaScript with ${jsn}-Mark.</h1>`);
+                }
+
+            }else{
+
+                if(c < 50 || java < 50 || js < 50){
+
+                    if(c < 50){
+
+                        if(java < 50){
+
+                            document.write(`<h1>You fail.You need ${cn}-Mark of Turbo C and ${jn}-Mark of Java to pass.</h1>`);
+
+                        }else if(js < 50){
+
+                            document.write(`<h1>You fail.You need ${cn}-Mark of Turbo C and ${jsn}-Mark of JavaScript to pass.</h1>`);
+
+                        }else{
+
+                            document.write(`<h1>You fail in Turbo C.You need ${cn}-Mark to pass.</h1>`);
+                        }
+
+                    }else if(java < 50){
+
+                        if(js < 50){
+
+                            document.write(`<h1>You fail.You need ${jn}-Mark in Java and ${jsn}-Mark in JavaScript.</h1>`);
+
+                        }else{
+                            
+                            document.write(`<h1>You fail in Java.You need ${jn}-Mark to pass.</h1>`);
+
+                        }
+
+                    }else{
+
+                        document.write(`<h1>You fail in JavaScript.You need ${jsn}-Mark to pass.</h1>`);
+
+                    }
+
+                }else{
+
+                    document.write(`<h1>You fail in all subject.You need ${cn}-Mark in Turbo C, ${jn}-Mark in Java and ${jsn}-Mark in JavaScript.</h1>`);
+
+                }
+            }
+        }
+    </script>
+    </center>
+</body>
+</html>
