@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //For Loop
+
+        // for(initialization,condition,increase,decrease){
+        //     document.write("ksdfkaksdfjal;sdjfj")
+        // }
+
+        for(let i=1;i<=5;i++){
+            document.write(`<h1>Hello JavaScript</h1>`);
+        }
+
+        for(let n=1;n<=10;n++){
+            result = 2*n;
+            document.write(`<h1> 2 x ${n} = ${result}</h1>`);
+        }
+
+        let list = ['a','b','c','d'];
+        for (let j = 0;j < list.length; j++){
+            document.write(`<h3>${list[j]}</h3>`);
+        }
+ 
+        //While Loop
+        let num = 1;
+        while(num <= 10){
+            document.write(`<h3>This number is ${num}</h3>`);
+            num++;
+        }
+
+        //Do While Loop
+        let np = 1;
+        do{
+            document.write(`<h3>This no is ${np}</h3>`);
+                np++;
+        }while( np < 0);
+
+    </script>
+</body>
+</html>
