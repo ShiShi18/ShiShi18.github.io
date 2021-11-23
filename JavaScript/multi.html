@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiplication</title>
 </head>
-<body>
+<body><center>
     <script>
         let a = prompt(`Which number of multiplication do you want`);
-        a = Number(a)
+        a = Number(a);
+        console.log(typeof(a));
         document.write(`<h1>Multiplication of ${a} is as follow:</h1>`);
         for(let b = 1;b<=12;b++){
-            
             result = a*b;
-            document.write(`<h3> ${a} x ${b} = ${result}</h3>`);
+            document.write(`<h2> ${a} x ${b} = ${result}</h2>`);
         }
-    </script>
+    </script></center>
 </body>
 </html>
