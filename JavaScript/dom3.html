@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">DOM</h1>
+    <img src="img.jpg" alt="" id="img">
+    <button onclick="move()" onclick="moveb()">Change</button>
+    <br><br>
+    <img src="img1.jpg" alt="" id="img1" width="600" height="400" onmouseover="big()" onmouseout="normal()">
+
+    <script>
+        function move(){
+            let img = document.getElementById('img');
+            document.getElementById('h1').style.backgroundColor = "red";
+            img.style.width = '300px';
+            img.style.height = '200px';
+        }
+        
+        function big(){
+            let img1 = document.getElementById('img1');
+            img1.style.width = "800px";
+            img1.style.height = "600px";
+        }
+
+        function normal(){
+            let img1 = document.getElementById('img1');
+            img1.style.width = "600px";
+            img1.style.height = "400px";
+        }
+    </script>
+</body>
+</html>

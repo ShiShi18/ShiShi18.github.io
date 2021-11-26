@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "clock"></h1>
+    <script>
+        let now  = new Date();
+        console.log(now);
+        let monthName = ['Jan','Feb','Mar','Apr','May','Jun','July','Aug','Sep','Oct','Nov','Dec']
+        console.log(monthName[now.getMonth()]);
+
+        function timer(){
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            document.getElementById('clock').innerHTML = `${hour} : ${min} : ${sec}`;
+        }
+        setInterval('timer()',1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1" onclick="someChange()">Creat Element</h1>
+    <button onclick="click_event()">Click</button><br><br>
+    <input type="text" name="name" id="name">
+    <button onclick="adding()">Add</button>
+    <ul id="list">
+        <li>Apple</li>
+    </ul>
+
+    <script>
+        function click_event(){
+            let h3 = document.createElement('h3');
+            h3.innerHTML = "Creat h3 Element";
+            document.body.appendChild(h3);
+        }
+
+        function adding(){
+            let name = document.getElementById('name').value;
+            console.log(name);
+            let list = document.getElementById('list');
+            let list_data = document.createElement('li');
+            list_data.innerHTML = name;     
+            list.appendChild(list_data);
+        }
+
+        function someChange(){
+            let h1 = document.getElementById('h1');
+            let attr = h1.getAttribute('class');
+            if(attr){
+                h1.removeAttribute('class');
+            }else{
+                h1.setAttribute('class','header');
+            }
+        }
+    </script>
+</body>
+</html>
