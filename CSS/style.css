@@ -1,0 +1,284 @@
+h1{
+    color:red;
+    color: #ff0000;
+    text-align:center;
+    text-transform: uppercase;
+}
+p{
+    /* color:green;
+    line-height: 30px;
+    word-spacing: 30px;
+    letter-spacing:10px; */
+}
+*{
+     margin:0px;
+    padding:0px;
+} 
+/* Tag Selector Element Selector */
+h4{
+    /* color:red;
+    line-height: 40px;
+    text-align:justify; */
+}
+
+/* Attribute Selector */
+/* a[title="Google"]{
+    color:black;
+    text-decoration:none;
+} */
+
+/* Id selector */
+#idselector{
+    /* color:red; */
+
+}
+
+/* Class Selector */
+.one{
+    /* color:green;
+    word-spacing:10px ;
+    letter-spacing: 10px; */
+}
+
+/* Descendent Selector */
+/* .desc a{
+    color:red;
+
+}
+
+/* Child Selector */
+/* .child >a{
+    color:green;
+
+} */ 
+
+/* Pseudo Selector */
+/* a:link{
+    color:red;
+}
+
+a:hover{
+    color:green;
+}
+
+ a:active{
+    color:yellow;
+}
+  
+a:visited{
+    color: brown;
+} */
+
+/* Target */
+:target{
+    color:red;
+    font-size:30px;
+    line-height: 50px;
+}
+
+/* Student Register */
+form{
+    width: 80%;
+    /* background-color:pink; */
+    margin: auto;
+}
+
+input[type="text"],input[type="number"],input[type="email"]{
+    width:100%;
+    height:40px;
+    outline:none;
+
+}
+
+input[type="text"]:focus,input[type="number"]:focus,input[type="email"]:focus{
+    border:3px solid#555;
+}
+
+#dob{
+    width: 90%;
+      
+}
+
+#dob select{
+    width: 30%;
+    height: 40px;
+}
+
+input[type="radio"]:checked + label{
+    color:tomato;
+}
+#address{
+    width:100%;
+    height: 100px;
+    outline: none;
+    border-radius: 20px;
+}
+
+input[type="checkbox"]:enabled + label{
+    color:tomato;
+    font-style:italic;
+}
+
+input[type="checkbox"]:checked + label{
+    color:violet;
+    font-style:normal;
+}
+
+input[type="checkbox"]:disabled + label{
+    color:thistle;
+}
+
+ul li{
+    margin-Left: 50px;
+    width:80%;
+    line-height: 40px;
+}
+
+li:first-child{
+    background-color:tomato;
+
+}
+
+li:last-child{
+    background-color: tomato;
+}
+
+li:nth-child(4){
+    background-color: greenyellow;
+}
+
+p:empty{
+    width:100%;
+    height:30px;
+    background-color: turquoise;
+}
+
+.thanku{
+    text-align:center;
+}
+
+/* Margin */
+.marginone{
+    border: 1px solid black;
+    margin: 15px;
+    /* T / R / B / L */
+}
+
+.margintwo{
+    border:1px solid black;
+    margin-top:40px;
+}
+
+/* Padding */
+.padding{
+    border:1px solid black;
+    padding: 30px 60px;
+    /* a shae ka top and bottom back ka left and right */
+}
+
+/* Layout */
+.inline{
+    color:red;
+    border: 1px solid rgb(221, 0, 0);
+    width:400px;
+    height:50px;
+    display:inline-block;
+}
+.block{
+    border:1px solid black;
+    width:400px;
+    height:50px;
+    display:inline-block;
+}
+
+/* Float */
+div.floatleft img{
+    width: 40%;
+    float:left;
+}
+.clear{
+    clear:both;
+}
+
+div.floatright img{
+    width:40%;
+    float:right;
+}
+
+/* Grid */
+.gridone div,.gridtwo div,.grid3 div,.grid4 div,.grid5 div,.grid6 div{
+    padding:20px;
+    text-align:center;
+    color:white;
+}
+
+.gridone,.gridtwo,.grid3,.grid4,.grid5,.grid6{
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+.gridtwo{
+    grid-column-gap: 50px;
+}
+.grid3{
+    grid-row-gap: 50px;
+}
+.grid4{
+    grid-gap: 40px;
+}
+.grid5 .columnadd{
+    grid-column-start: 1;
+    grid-column-end:4;
+}
+.grid6 .rowadd{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/* Position */
+.relative_parents{
+    border:1px solid black;
+    width: 1000px;
+    height:700px;
+}
+.relative{
+    border: 1px solid red;
+    width: 500px;
+    position:relative;
+    top:70px;
+    left: 100px;
+}
+.absolute_parents{
+    position:relative;
+    border:1px solid yellow;
+    width:1200px;
+    height:500px;
+}
+.absolute{
+    border:2px solid green;
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+.fixed{
+    position:fixed;
+    top:100px;
+    left:1000px;
+}
+/* Font */
+.onlinefont{
+    font-family: 'Yuji Boku', serif;
+}
+
+/* Offline */
+@font-face{
+    src:url(Yuji_Boku\YujiBoku-Regular.ttf);
+    font-family: Yuji;
+}
+
+.offlinefont{
+    font-family: Yuji;
+}
+
+
+
