@@ -1,0 +1,366 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+@font-face{
+    src:url(../Lobster/Lobster-Regular.ttf);
+    font-family:Lobster;
+}
+.logo{
+    width:100px;
+    height:70px;
+    margin-left: 30px;
+}
+.brandname{
+    margin-top:-50px;
+    margin-left:80px;
+    font-weight:bold;
+    font-family:Lobster;
+    font-size:20px;
+}
+.nav_brand{
+    display:inline-block;
+}
+.nav_bar ul{
+    float:right;
+}
+.nav_bar ul li{
+    display: inline-block;
+    margin-right:40px;
+    margin-top:30px;
+    text-transform: uppercase;
+}
+.nav_bar ul li a{
+    color:black;
+    font-weight:bold;
+    text-decoration: none;
+}
+.nav_bar ul li a:hover{
+    color:cadetblue;
+    letter-spacing:3px;
+    transition-duration:0.5s;
+}
+.nav_bar{
+    height:80px;
+}
+.clear{
+    clear:both;
+}
+.img{
+    width:100%;
+    height:600px;
+}
+.background_text{
+    position: absolute;
+    top:300px;
+    left:100px;
+}
+.perfect{
+    font-family:Lobster;
+    font-weight:unset;
+    margin-bottom:30px;
+}
+.shop{
+   padding:10px 20px;
+   color:cadetblue;
+   border: 1px solid cadetblue;
+   border-radius:5px;
+   margin-top:30px;
+}
+.shop:hover{
+    color:white;
+    background-color: cadetblue;
+}
+
+/* product */
+.header{
+    text-decoration:none;
+    text-align:center;
+    padding-top:50px;
+}
+.divided{
+    margin:auto;
+    max-width:100px;
+    border:1px solid cadetblue;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top:50px;
+    grid-gap:40px;
+    text-align:center;
+    margin-left:50px;
+    margin-right:50px;
+}
+.product_img{
+    border-radius:5px;
+    box-shadow:0px 5px 10px cadetblue;
+}
+.product_img:hover{
+    
+    box-shadow: 0px 20px 40px cadetblue;
+    transition-duration: 0.5s;
+}
+.red{
+    color:red;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    text-align:center;
+    margin-top:80px;
+    background-image: url(../images/bgimg1.jpg);
+    color:white;
+}
+.about div{
+    padding: 60px 0px;
+}
+.about_hr{
+    max-width:40px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.packaging{
+    margin-top:80px;
+    margin-left:100px;
+}
+.floatimg{
+    
+    border-radius:5px;
+    float:left;
+}
+.packagetext{
+    position:relative;
+    left:50px;
+    width:88%;
+    text-align:justify;
+}
+.packaging_header{
+    margin-top:20px;
+}
+.support{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top:80px;
+    background-color:rgb(206, 202, 202);
+    padding-right:30px;
+    padding-top:30px;
+    padding-left:30px;
+    padding-bottom:30px;
+}
+.clear{
+    clear: both;
+}
+.support_icon p{
+    display:inline-block;
+    margin-left:30px;
+}
+.footer{
+    height:230px;
+    background-color:rgb(97, 94, 94)
+}
+.footnav{
+    display:inline-block;
+    text-decoration:none;
+    color:gray;
+    padding:50px 20px 0px 50px;
+    color:rgb(255, 251, 251);
+    
+}
+.designed{
+    color:white;
+    margin-top:30px;
+}
+.socialicon{
+    display: inline-block;
+    color:white;
+    padding:30px 30px 0px ;
+}
+/* Shop Page */
+.filter{
+    position:absolute;
+    left:80px;
+    top:70px;
+    color:cadetblue;
+    border-radius:3px;
+    padding:15px 30px;
+    border: 1px solid cadetblue;
+    margin-top:30px;
+    
+}
+.filter1{
+    position:absolute;
+    left:200px;
+    top:70px;
+    color:cadetblue;
+    border-radius:3px;
+    padding:15px 30px;
+    border: 1px solid cadetblue;
+    margin-top:30px;
+    
+}
+.filter:hover{
+    color:white;
+    background-color: cadetblue;
+}
+.filter1:hover{
+    color:white;
+    background-color: cadetblue;
+}
+.hr1{
+    margin:auto;
+    margin-top:80px;
+    max-width:98%;
+    border:1px solid cadetblue;
+}
+.hr2{
+    margin:auto;
+    max-width:98%;
+    border:1px solid cadetblue;
+}
+.headtext{
+    display:inline-block;
+    position:absolute;
+    top:100px;
+    right:80px;
+    font-family:Lobster;
+    color:cadetblue;
+}
+.cartbutton{
+    margin-top:10px;
+    border:1px solid cadetblue;
+    border-radius:3px;
+    padding:5px 10px;
+    color:cadetblue;
+    background-color:white;
+}
+.cartbutton:hover{
+    color:white;
+    background-color:cadetblue;
+}
+.btmp{
+    color:cadetblue;
+    position:fixed;
+    bottom:40px;
+    right:40px;
+}
+.about_intro{
+    text-align:center;
+    padding:100px 0px 100px 0px;
+    background-image:url(../images/aboutimg.jpg)
+}
+.aboutheader{
+    font-family:Lobster;
+}
+.about_2{
+    float:left;
+}
+.about_img2{
+    float:left;
+    margin-top:50px;
+    margin-left:25px;
+    margin-bottom:50px;
+    border-radius:5px;
+    box-shadow:0px 10px 20px cadetblue;
+    width:400px;
+    height:400px;
+
+}
+.about_img2:hover{
+    border-radius:5px;
+    box-shadow: 0px 20px 40px cadetblue;
+    transition-duration: 0.5s;
+}
+.about2_text{
+    text-align:justify;
+    margin-left:400px;
+    margin-top:100px;
+    padding:50px;
+}
+.about_3{
+    float:left;
+}
+.about_img3{
+    float:right;
+    margin-top:50px;
+    margin-left:25px;
+    margin-right:50px;
+    border-radius:5px;
+    box-shadow:0px 10px 20px cadetblue;
+    width:600px;
+    height:400px;
+
+}
+.about_img3:hover{
+    border-radius:5px;
+    box-shadow: 0px 20px 40px cadetblue;
+    transition-duration: 0.5s;
+}
+.about3_text{
+    margin-top:100px;
+    text-align:justify;
+    padding:50px;
+}
+.hr3{
+    margin:auto;
+    max-width:97%;
+    border:1px solid cadetblue;
+}
+.contact_header{
+    background-image: url(../images/aboutimg.jpg);
+    padding:100px;
+    text-align:center;
+}
+.contact_head{
+    font-family:Lobster;
+}
+.feedback{
+    margin-top:50px;
+    margin-left:100px;
+    padding:50px 100px 50px 100px;
+    float:left;
+    box-shadow:0px 20px 40px black;
+    border-radius: 5px;
+}
+#name,#email,#message{
+    width:300px;
+    height:40px;
+    border-radius: 3px;
+}
+.feedback_button{
+    text-align:center;
+    width:300px;
+    height:40px;
+    border:1px solid cadetblue;
+    color:cadetblue;
+    border-radius: 3px;
+}
+.feedback_button:hover{
+    color:white;
+    background-color: cadetblue;
+}
+.feedback_icon{
+    display:grid;
+    grid-template-rows:auto auto auto;
+    
+}
+.feedback_img{
+    float:right;
+    width:700px;
+    height:500px;
+    padding-top:100px;
+    padding-right:100px;
+}
+.feedback_onpic{
+    float:right;
+    margin-right:300px;
+    margin-top:-280px;
+    color:white;
+    font-family:Lobster;
+}
+.hr_feedback{
+    border:1px solid black;
+}

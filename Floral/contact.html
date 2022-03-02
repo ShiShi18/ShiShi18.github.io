@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Floral</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="fontawesome/js/all.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="nav_bar">
+            <div class="nav_brand">
+                <a href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+                <p class="brandname"><b>Shi Floral</b></p>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="">Vlog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        <!-- </nav>Navigation End -->
+    </header>
+    <main>
+    <div class="contact_header">
+        <h1 class="contact_head">Contact Us</h1><br>
+        <p><b>You can call us anytime.You can send messages anytime.We are 24/7 with you.Don't hesitate to give us a call.</b></p>
+
+    </div>
+
+    <div class="feedback">
+        <form action="save.php" mrthod="GET">
+        <label for="name" class="feedback_title"><p>Name</p></label>
+        <input type="text" name="name" id="name" required><br><br>
+        <label for="email" class="feedback_title"><p>Email</p></label>
+        <input type="email" name="email" id="email" required><br><br>
+        <label for="message" class="feedback_title"><p>Feedback</p></label>
+        <input type="text" name="message" id="message" required><br><br>
+        <button class="feedback_button" type="submit" onclick="add()">Send Feedback</button><br><br>
+
+        <script>
+            function add(){
+                alert(`Your feedback is sent to the admin team.Thank You for Your Feedback.`)
+            }
+        </script>
+
+        <hr class="hr_feedback"><br><br></form>
+        
+        <h2>Contact Information</h2><br>
+        
+        <div class="feedback_icon">
+           
+            <p><i class="fas fa-map-marker-alt fa-2x"></i>  123,Pagoda Road,Yangon</p><br>
+        </div>
+        <div class="feedback_icon">
+            
+            <p><i class="fas fa-phone-alt fa-2x"></i>  +959 846565824</p><br>
+        </div>
+        <div class="feedback_icon">
+            
+            <p><i class="fas fa-at fa-2x"></i>  shifloral@gmail.com</p>
+        </div>
+    </div>
+    <div>
+        <img src="../Floral/images/aboutimg1.jpg" alt="" class="feedback_img">
+        <h1 class="feedback_onpic">How Can We Help You?</h1>
+    </div>
+        
+    <div class="clear"></div>
+        <div class="support">
+            <div class="support_icon">
+                <i class="fas fa-shipping-fast fa-3x"></i>
+                <p><b>Free Shipping</b><br>For order from $50</p>
+            </div>
+            <div class="support_icon">
+                <i class="fas fa-headset fa-3x fa-3x"></i>
+                <p><b>Support 24/7</b><br>Call us anytime</p>
+            </div>
+            <div class="support_icon">
+                <i class="fas fa-shield-alt fa-3x"></i>
+                <p><b>100% Safety</b><br>Only secure payments</p>
+            </div>
+            <div class="support_icon"><i class="fas fa-tags fa-3x"></i>
+                <p><b> Offer</b><br>Discounts up to 90%</p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <center>
+            <a href="index.html" class="footnav">Home</a>
+            <a href="shop.html" class="footnav">Shop</a>
+            <a href="" class="footnav">Blog</a>
+            <a href="about.html" class="footnav">About</a>
+            <a href="contact.html" class="footnav">Contact</a>
+            <p class="designed">Designed By<i class="fas fa-heart"></i> Nyan Htet Shi @ 2021</p>
+            <a href="https://www.facebook.com/profile.php?id=100036208460744&sk=about" class="socialicon"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100036208460744&sk=about" class="socialicon"><i class="fab fa-facebook-messenger fa-2x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100036208460744&sk=about" class="socialicon"><i class="fab fa-viber fa-2x"></i></a>
+        </center>
+    </footer>
+
+</body>
+</html>
