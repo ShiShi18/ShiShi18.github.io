@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+            var btn = $("button");
+            btn.on('click',function(param){
+                //console.log('clicked!');
+                $("p").hide(500,function(param){
+                    alert('hided element');
+                });
+                
+            })
+
+            $("a").on("click",function(e){
+                alert('Hi');
+                e.preventDefault();
+            })
+
+            $("#year").on('change',function(param){
+                var year = $(this).val();
+                if(year > 1){
+                    $('#major').show();
+                }else{
+                    $('#major').hide();
+                }
+            })
+
+            $("#myform").on('sumit',function(e){
+                var err=false;
+
+                var username = $("#username").val();
+                if(username.length <= 5){
+                    err = true;
+                }
+                //for phone no
+                if(err)
+                    e.preventDefault();
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="https://google.com" target="_blank">Google</a>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, architecto. Tenetur velit harum illo illum atque quidem eveniet pariatur voluptatum, minus adipisci aperiam doloribus! Minus porro sit molestiae cupiditate blanditiis.</p>
+    <button>Click</button><br><br>
+
+    <form action="" id="myform">
+        <input type="text" name="username" placeholder="Username...." id="username"><br><br>
+        <input type="text" name="phoneno" placeholder="Phone No...." id="phoneno"><br><br>
+        <select name="year" id="year">
+            <optgroup label="Academic Year">
+                <option value="1">First Year</option>
+                <option value="2">Second     Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+            </optgroup>
+        </select>
+
+        <div id="major" style="display: none;">
+            <input type="radio" name="major" checked="checked" value="cs">CS
+            <input type="radio" name="major" value="ct">CT
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

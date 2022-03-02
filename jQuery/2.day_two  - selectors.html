@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "jquery.min.js"></script>
+    <script>
+        $(function(param){
+            var ele = $("#myp")
+            //console.log(ele);
+            ele.click(function(param){
+                $(this).hide(); // current element
+            })
+            var ele2 = $(".mybtn");
+            ele2.click(function(param){
+                $("#myp").hide();// desire element
+            })
+            var ele3 = $("p.intro");
+            //console.log(ele3);
+
+            var ele4 = $('ul li:first');
+            //console.log(ele4);
+
+            var ele5 = $('#content ul.people li');
+            //console.log(ele5);
+
+            var ele6 = $(':button');
+            console.log(ele6);
+        })
+    </script>
+</head>
+<body>
+    <p class = "myp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus in aliquam reprehenderit officia harum blanditiis eaque natus, amet veniam dolorum! Modi debitis architecto itaque asperiores dignissimos officiis dolore cum ipsum nemo? Facere sequi perferendis, pariatur eveniet laboriosam tempore sunt beatae quam laudantium, dolor, omnis tenetur. Eius corrupti rem voluptates deleniti non, quasi minima labore accusantium, similique assumenda distinctio sint iure ut. Ex quam vel porro dolorum nostrum! Omnis voluptatum expedita totam et tempora sapiente dolores tempore ipsa possimus. Assumenda nulla error eum quidem numquam quia, consectetur fuga, sit molestiae quasi, reprehenderit cumque deserunt? Cum eveniet unde explicabo iste provident ad.</p>
+    
+    <p id = "myp">This is p tag.</p>
+
+    <button class = "mybtn">Click</button>
+
+    <h2 class = "intro">This is JQ</h2>
+
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Mango</li>
+    </ul>
+
+    <div id="contents">
+        <ul class="people">
+            <li>Apple1</li>
+            <li>Orange1</li>
+            <li>Mango1</li>
+        </ul>
+    </div>
+
+    <form action="">
+        <input type="text" username="username">
+        <input type="button" name="mybtn" value="Save">
+    </form>
+</body>
+</html>

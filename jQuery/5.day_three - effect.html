@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+            $('#hide').on('click',function(param){
+                $('p').hide(500);
+            })
+            $('#show').on('click',function(param){
+                $('p').show(500);
+            })
+            $('#toggle').on('click',function(param){
+                $('p').toggle(500);
+                
+            })
+            $('#fadein').on('click',function(param){
+                $('p').fadeIn(500);
+            })
+            $('#fadeout').on('click',function(param){
+                $('p').fadeOut(500);
+            })
+            $('#fadeout').on('click',function(param){
+                $('p').fadeOut(500);
+            })
+            $('#fadetoggle').on('click',function(param){
+                $('p').fadeToggle(500);
+            })
+            $('#fadeto').on('click',function(param){
+                $('div').fadeTo(500,0.1);
+            })
+            $('#slidedown').on('click',function(param){
+                $('p').slideDown(500);
+            })
+            $('#slideup').on('click',function(param){
+                $('p').slideUp(500);
+            })
+            $('#slidetoggle').on('click',function(param){
+                $('p').slideToggle(500);
+            })
+            $('#animateone').on('click',function(param){
+                $('div').animate({left: '200px'});
+            })
+            $('#animatetwo').on('click',function(param){
+                $('div').animate({
+                    left: '200px',
+                    height: '+=200px',
+                    width: '+=200px'
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laboriosam quia pariatur suscipit modi! Iure placeat eligendi perferendis deleniti earum minima optio nam. Sed quibusdam suscipit excepturi placeat illo consequuntur.</p>
+    
+    <div style="width: 100px;height: 100px;background-color:yellowgreen;position: relative;"></div>
+    
+    <button id="hide">Hide</button><br>
+    <button id="show">Show</button><br>
+    <button id="toggle">Toggle</button><br> 
+
+    <button id="fadein">Fade In</button><br>
+    <button id="fadeout">Fade Out</button><br>
+    <button id="fadetoggle">FadeToggle</button><br>
+    <button id="fadeto">FadeTo</button><br>
+
+    <button id="slidedown">SlideDown</button><br>
+    <button id="slideup">SlideUp</button><br>
+    <button id="slidetoggle">SlideToggle</button><br>
+
+    <button id="animateone">Animate1</button>
+    <button id="animatetwo">Animate2</button>
+</body>
+</html>
