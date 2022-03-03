@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        let fruits = ['Apple','Banana','Lime','Lemon']
+
+        let students = [
+            {name: 'mgmg', age: 14,gender: 'male'},
+            {name: 'susu', age: 14,gender: 'female'},
+            {name: 'soesoe', age: 15,gender: 'female'},
+            {name: 'nunu', age: 16,gender: 'female'}
+        ]
+
+        var data = '';
+
+        // for([fruit,index]of fruits.entries()){
+        //     data += `I like ${index} - ${fruit}`;
+        // }
+
+        // $.each(fruits,function(i,v){
+        //     data += `i like ${i} - ${v}`;
+        // })
+
+        for(student of students){
+            data += `Age of ${student.name} - ${student.age}`;
+        }
+        console.log(data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

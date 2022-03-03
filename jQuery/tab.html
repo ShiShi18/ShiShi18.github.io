@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul.link-wapper {
+        list-style-type: none;
+        margin: 20px;
+        padding: 0;
+        text-align: center;
+    }
+
+    ul.link-wapper li {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    ul.link-wapper li a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+
+    ul.link-wapper li a.active{
+        color: #0037ff;
+        border-bottom: 1px solid red;
+    }
+
+    div.content {
+        max-width: 800px;
+        background-color: orange;
+        padding: 20px 50px;
+        margin: 0 auto 10px;
+        display: none;
+    }
+  </style>
+  <script src="jquery.min.js"></script>
+  <script>
+    $(function (param) { 
+      $('.content').first().slideDown();
+
+        $('ul.link-wapper li a').on("click",function (event) { 
+            var current_tab = $(this);
+            $('ul.link-wapper li a').removeClass('active');
+            current_tab.addClass('active');
+
+            $('.content').slideUp();
+            current_tab_href = current_tab.attr('href'); // #home
+            $(current_tab_href).slideDown(); // $('#home')
+
+            event.preventDefault();
+        })
+     })
+  </script>
+</head>
+<body>
+  <div class="tab">
+    <ul class="link-wapper">
+      <li>
+        <a href="#home" class="active">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+
+    <div class="content" id="home">
+      <h3>Home Page</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et molestias, fugiat praesentium perferendis, voluptas officia error qui totam laudantium eum quas eius architecto. Aspernatur veniam rem facere vitae voluptatum.</p>
+    </div>
+
+    <div class="content" id="about">
+      <h3>About Page</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et molestias, fugiat praesentium perferendis, voluptas officia error qui totam laudantium eum quas eius architecto. Aspernatur veniam rem facere vitae voluptatum.</p>
+    </div>
+
+    <div class="content" id="contact">
+      <h3>Contact Page</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et molestias, fugiat praesentium perferendis, voluptas officia error qui totam laudantium eum quas eius architecto. Aspernatur veniam rem facere vitae voluptatum.</p>
+    </div>
+  </div>
+</body>
+</html>

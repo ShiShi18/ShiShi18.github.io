@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+            let students = [
+            {name: 'mgmg', age: 14,gender: 'male'},
+            {name: 'susu', age: 14,gender: 'female'},
+            {name: 'soesoe', age: 15,gender: 'female'},
+            {name: 'nunu', age: 16,gender: 'female'}
+        ];
+
+            var data = '';
+            $.each(students,function(index,value){
+                data +=`
+                    <tr>
+                        <td>${++index}</td>
+                        <td>${value.name}</td>
+                        <td>${value.age}</td>
+                        <td>${value.gendr}</td>
+                    </tr>
+                `    
+            })
+            $('tbody').html(data);
+
+            $('#myForm').on('submit',function(e){
+                e.preventDefault();
+                var username = $('#username').val();
+                console.log(username)
+
+                $('#username').val(username.trim());
+            })
+
+            $('#button').on('click',function(param){
+                // var text = $('#mylink').text();
+                // var link = $('#mylink').attr('href');
+
+                $('#mylink').text('Facebook');
+                $('#mylink').attr('href','https://facebook.com');
+                $('#mylink').css({
+                    "text-decoration": "none"
+                });
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <form action="" id="myForm">
+        <input type="text" name="username" id="username"><br>
+        <input type="submit" value="Save">
+    </form>
+    <a href="https://google.com" id="mylink">Go Google</a>
+
+    <button id="button">Change</button>
+</body>
+</html>
