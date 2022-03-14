@@ -42,7 +42,6 @@
                 })
                 localStorage.setItem('quotes',JSON.stringify(qArr));
                 var random_number = Math.floor(Math.random()*qArr.length);
-                console.log(random_number)
                 var data = `
                     <div class="quote_area">
                         <h1 class="text">${qArr[random_number].text}</h1>
@@ -64,7 +63,6 @@
                     `
                 $("#quotes").html(data);
            })
-
         })
 
     </script>
