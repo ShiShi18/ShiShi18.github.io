@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+
+            $('#myform').on('submit',function(e){
+                var username = $.trim($('#username').val());
+                var age = Number($('#age').val());
+                var person = {
+                    name: username,
+                    age: age
+                }
+                console.log(person)
+                localStorage.setItem('person',JSON.stringify(person));
+                e.preventDefault();
+            })
+
+            $(".addtocart").on("click",function(param){
+                //****** 
+                var name = $(this).data("name");
+                var price = $(this).data("price");
+                var id = $(this).data("id");
+
+                var item = {
+                    id: id,
+                    name: name,
+                    price: price,
+                    qty: 1
+                }
+                
+                var cartArr = new Array()
+                var cartStr = localStorage.getItem('cart');
+                // console.log($.type(castStr));
+                if(!cartStr){
+                    cartArr.push(item);
+                }else{
+                    cartArr = JSON.parse(cartStr);//string to JS data type
+                    //console.log(cartArr)
+
+                    var old = false;
+
+                    $.each(cartArr,function(i,v){
+                        if(v.id==id){
+                            v.qty++;
+                            old = true;
+                        }
+                    })
+
+                    if(old == false){
+                        cartArr.push(item);
+                    }
+                    
+                } 
+                
+                
+
+
+            localStorage.setItem('cart',JSON.stringify(cartArr));
+           
+            
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="" id="myform">
+        <input type="text" name="username" id="username" placeholder="Mg Mg"><br>
+        <input type="number" name="age" id="age"> <br>
+        <input type="submit" value="Save">
+    </form>
+
+    <div class="card">
+        <img src="item1.jpg" alt="" width="200">
+        <p>Flower One</p>
+        <button class="addtocart" data-name="Item One" data-price="5000" data-id="1">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="item2.jpg" alt="" width="200">
+        <p>Flower Two</p>
+        <button class="addtocart" data-name="Item Two" data-price="5000" data-id="2">Add</button>
+    </div>
+</body>
+</html>

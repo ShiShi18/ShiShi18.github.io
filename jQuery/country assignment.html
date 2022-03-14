@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #countries{
+            display: grid;
+            grid-template-columns:  400px 400px 400px 400px 400px;
+            grid-gap: 20px;
+            margin: auto;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:  "https://restcountries.com/v3.1/all",
+                type: "GET",
+                dataType: "json",
+            }).done(function(json){
+                console.log(json)
+                var data= "";
+                $.each(json,function(i,v){
+                    data += `<div class="country">
+                                <img src="${v.flags.png}"  class="flag_img"></img>
+                                <div class="content">
+                                    <h3>${v.name.common}</h3>
+                                    <p>Capital: ${v.capital}</p>
+                                    <p>Region: ${v.region}</p>
+                                    <p>Population: ${v.population}</p>
+                                </div>
+                             </div>
+                            `
+                    
+                })
+
+               $("#countries").html(data)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="countries"></div>
+</body>
+</html>

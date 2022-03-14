@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+            $('#mybtnget').on('click',function(){
+                $.get("https://api.imgflip.com/get_memes",function(response){
+                    console.log(response);
+                    var data=""
+                    $.each(response.data.memes,function(i,v){
+                        data += `<img src="${v.url}" width="100">`
+                    })
+                    $("#memes").html(data)
+                })
+            })
+            $('#mybtnpost').on('click',function(param){
+                $.post("https://api.imgflip.com/caption_image",{
+                    template_id: "61579",
+                    username: "ThetPaingHtut",
+                    password: "1234!@#$apple",
+                    text0: "Hi",
+                    text1: "Hello",
+                },function(response){
+                    //console.log(response)
+                    var img = `<img src="${response.data.url}" width="500">`
+                    $("#memes").html(img);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="mybtnget">Get Method</button>
+    <button id="mybtnpost">Post Method</button>
+    <div id="memes"></div>
+    
+</body>
+</html>

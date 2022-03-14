@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quote_area{
+            text-align: center;
+            padding: 100px;
+            box-shadow: 0px 10px 20px black;
+        }
+        #btn{
+            display: center;
+            border-radius: 5px;
+            padding :10px;
+
+        }
+        .center{
+            padding:100px;
+            text-align: center;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+           $.ajax({
+                url: "https://type.fit/api/quotes",
+                type: "GET",
+                dataType: "json",
+           }).done(function(json){
+                var data="";
+                var a = 1;
+                var qArr = new Array;
+                $.each(json,function(i,v){
+                    a++;
+                    var quote ={
+                        text: v.text,author: v.author,
+                    }
+                    qArr.push(quote);
+                })
+                localStorage.setItem('quotes',JSON.stringify(qArr));
+                var random_number = Math.floor(Math.random()*qArr.length);
+                console.log(random_number)
+                var data = `
+                    <div class="quote_area">
+                        <h1 class="text">${qArr[random_number].text}</h1>
+                        <h3 class="author">${qArr[random_number].author}</h3>
+                    </div>
+                    `
+                $("#quotes").html(data);
+           })
+
+           $("#btn").on("click",function(){
+                var qStr = localStorage.getItem("quotes");
+                var qArr = JSON.parse(qStr)
+                var random_number = Math.floor(Math.random()*qArr.length);
+                var data = `
+                    <div class="quote_area">
+                        <h1 class="text">${qArr[random_number].text}</h1>
+                        <h3 class="author">${qArr[random_number].author}</h3>
+                    </div>
+                    `
+                $("#quotes").html(data);
+           })
+
+        })
+
+    </script>
+</head>
+<body>
+    <div id="quotes"></div>
+    <div class="center">
+        <button id="btn">Quote</button>
+    </div>
+    
+</body>
+</html>
